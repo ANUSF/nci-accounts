@@ -1,6 +1,25 @@
 <%= semantic_form_for @user do |form| %>
   <%= form.inputs do %>
     <%= form.input :login, :label => "Existing login" %>
+    <%= form.input :connect, :label => "Connect User on System", :as => :select, :collection => ['YES', 'NO'] %>
+    <%= form.input :status, :label => "Researcher Role", :as => :select, :collection => User::ROLES %>
+
+    <%= form.input :surname, :label => "Surname" %>
+    <%= form.input :firstname, :label => "First Name" %>
+    <%= form.input :init, :label => "Middle Initial" %>
+    <%= form.input :title, :label => "Person's Title" %>
+    <%= form.input :position, :label => "Position Held" %>
+
+    <%= form.input :email, :label => "E-Mail Address" %>
+    <%= form.input :phone, :label => "Office Phone" %>
+    <%= form.input :mobile, :label => "Mobile Phone" %>
+    <%= form.input :department, :label => "Department" %>
+    <%= form.input :faculty, :label => "Faculty or Division" %>
+    <%= form.input :institution, :label => "University or Institution" %>
+
+    <%= form.input :state, :label => "State" %>
+    <%= form.input :country, :label => "Country" %>
+    <%= form.input :postcode, :label => "Postcode" %>
   <% end %>
 
   <%= form.buttons do %>

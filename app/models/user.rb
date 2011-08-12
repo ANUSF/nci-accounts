@@ -8,6 +8,8 @@ class User
     :email, :phone, :mobile, :department, :faculty, :institution,
     :state, :country, :postcode
 
+  ROLES = ['Researcher', 'CI']
+
   def initialize(attrs={})
     attrs.each do |name, value|
       send("#{name}=", value)
