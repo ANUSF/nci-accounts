@@ -1,0 +1,9 @@
+<%= semantic_form_for @user do |form| %>
+  <%= form.inputs do %>
+    <%= form.input :login, :label => "Existing login" %>
+  <% end %>
+
+  <%= form.buttons do %>
+    <%= form.commit_button %>
+  <% end %>
+<% end %>
